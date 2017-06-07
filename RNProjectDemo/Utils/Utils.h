@@ -6,7 +6,7 @@
 //  Copyright © 2016年 zzq. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface Utils : NSObject
 

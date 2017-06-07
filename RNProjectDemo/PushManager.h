@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <React/RCTBridgeModule.h>
 
-@interface PushManager : NSObject
+@interface PushManager : NSObject<RCTBridgeModule>
 
 @end

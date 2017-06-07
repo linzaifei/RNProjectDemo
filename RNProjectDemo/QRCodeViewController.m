@@ -1,16 +1,21 @@
+
 //
 //  QRCodeViewController.m
-//  IntegrationMediate
+//  RNProjectDemo
 //
-//  Created by 张兆卿 on 16/8/6.
-//  Copyright © 2016年 zzq. All rights reserved.
+//  Created by xsy on 2017/6/6.
+//  Copyright © 2017年 林再飞. All rights reserved.
 //
+
 
 #import "QRCodeViewController.h"
 #import <AVFoundation/AVFoundation.h>
-#import "BaseTapSound.h"
-#import "BaseNavigationController.h"
-#import "MediateMessageViewController.h"
+
+#define kScreenHeight   [UIScreen mainScreen].bounds.size.height
+#define kScreenWidth    [UIScreen mainScreen].bounds.size.width
+#define kTabBarHeight 49
+#define kNavgationBarHeight 64
+
 @interface QRCodeViewController () <AVCaptureMetadataOutputObjectsDelegate, UIAlertViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>{
     SystemSoundID soundID;
     float move;
@@ -30,9 +35,15 @@
 
 @implementation QRCodeViewController
 
-- (void)viewWillAppear:(BOOL)animated{
+-(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self.navigationController.navigationBar setBarTintColor:HexRGB(0xFFFFFF)];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+       [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)notificAction{
@@ -46,8 +57,7 @@
     }
     
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    
-    XSYLog(@"安全扫码控制器QRCodeViewController----->被销毁了");
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -80,7 +90,7 @@
     
     move = 1.0;
     //扫描区域宽、高大小
-    float QRWIDTH = 200/320.0*kScreenWidth;
+    float QRWIDTH = 200/320.0 * kScreenWidth;
     
     //创建扫描区域框
     _qrView=[[UIImageView alloc]init];
@@ -204,25 +214,18 @@
             self.lineLabel.hidden = YES;
         }
         
-        [[BaseTapSound shareTapSound] playSystemSound];
-        
         AVMetadataMachineReadableCodeObject * metadataObject = [metadataObjects objectAtIndex : 0 ];
         stringValue = metadataObject.stringValue ;
-        
-        
-        if ([stringValue rangeOfString:@"?mediatorId="].location !=NSNotFound) {
-            NSRange range = [stringValue rangeOfString:@"="];
-            NSString *sessionId = [stringValue substringFromIndex:range.location+1];
-            MediateMessageViewController *doneQRCodeCtrl = [[MediateMessageViewController alloc]init];
-            doneQRCodeCtrl.mediatorId = sessionId;
-            doneQRCodeCtrl.isQR = YES;
-            [self.navigationController pushViewController:doneQRCodeCtrl animated:YES];
-        
-        } else {
-            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"提示", nil) message:NSLocalizedString(@"很抱歉,暂不支持扫描外部二维码!", nil) delegate:self cancelButtonTitle:nil otherButtonTitles:NSLocalizedString(@"确定", nil), nil];
-            alert.tag = 200;
-            [alert show];
+        if (stringValue.length > 0) {
+            [self.navigationController popViewControllerAnimated:YES];
+            if (self.popBlock) {
+                self.popBlock(stringValue);
+                
+            }
         }
+        
+        
+       
     }
 }
 
@@ -233,7 +236,7 @@
         if (buttonIndex == 0) {
             [self.navigationController popViewControllerAnimated:YES];
         } else {
-            [Utils openSystemSettingView];
+            [self openSystemSettingView];
             
             // 延时0.35秒后消失
             __block QRCodeViewController *weakSelf = self;
@@ -247,7 +250,7 @@
 
 //允许访问相机
 - (void)canUseSystemCamera {
-    if (![BaseTapSound ifCanUseSystemCamera]) {
+    if (![self ifCanUseSystemCamera]) {
         _lineLabel.hidden = YES;
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"“在线法院”已禁用相机", nil) message:NSLocalizedString(@"请在iPhone的“设置”选项中,允许“在线法院”访问你的相机", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"取消", nil) otherButtonTitles:NSLocalizedString(@"设置", nil), nil];
         alert.tag = 100;
@@ -269,6 +272,31 @@
         self.lineTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(moveLine) userInfo:nil repeats:YES];
         self.lineLabel.hidden = NO;
     }
+}
+
+
+/**
+ 打开系统设置
+ */
+-(void)openSystemSettingView{
+    NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+    if ([[UIApplication sharedApplication] canOpenURL:url]) {
+        [[UIApplication sharedApplication] openURL:url];
+    }
+}
+
+/**
+ * 是否有权限使用系统相机
+ */
+-(BOOL)ifCanUseSystemCamera{
+    NSString *mediaType = AVMediaTypeVideo;
+    AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:mediaType];
+    if(authStatus == AVAuthorizationStatusRestricted || authStatus == AVAuthorizationStatusDenied){
+        
+        NSLog(@"相机权限受限");
+        return NO;
+    }
+    return YES;
 }
 
 @end

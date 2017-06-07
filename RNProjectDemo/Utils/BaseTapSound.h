@@ -6,7 +6,7 @@
 //  Copyright © 2016年 zzq. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 /** 播放音效类、判断应用是否有权限使用相机 */
 @interface BaseTapSound : NSObject

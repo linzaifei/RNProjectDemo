@@ -9,6 +9,8 @@
 #import "Utils.h"
 #import <AVFoundation/AVFoundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
+#define kScreenHeight   [UIScreen mainScreen].bounds.size.height
+#define kScreenWidth    [UIScreen mainScreen].bounds.size.width
 
 @implementation Utils
 /*
@@ -239,7 +241,7 @@
                                                         options:NSJSONReadingMutableContainers
                                                           error:&err];
     if(err) {
-        XSYLog(@"json解析失败：%@",err);
+        NSLog(@"json解析失败：%@",err);
         return nil;
     }
     return dic;

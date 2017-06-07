@@ -15,6 +15,12 @@
 		352AA0171EE69E8B00BB6550 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 352AA0151EE69E8B00BB6550 /* LaunchScreen.storyboard */; };
 		352AA0221EE69EA400BB6550 /* RNProjectDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 352AA0211EE69EA400BB6550 /* RNProjectDemoTests.m */; };
 		352AA02D1EE69EA600BB6550 /* RNProjectDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 352AA02C1EE69EA600BB6550 /* RNProjectDemoUITests.m */; };
+		352AA0471EE78C3400BB6550 /* RNToNativeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 352AA0461EE78C3300BB6550 /* RNToNativeManager.m */; };
+		352AA0631EE7CD5100BB6550 /* PushManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 352AA0621EE7CD5100BB6550 /* PushManager.m */; };
+		352AA0661EE7D47900BB6550 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 352AA0651EE7D47900BB6550 /* QRCodeViewController.m */; };
+		352AA06C1EE7D59800BB6550 /* BaseTapSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 352AA0691EE7D59800BB6550 /* BaseTapSound.m */; };
+		352AA06D1EE7D59800BB6550 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 352AA06B1EE7D59800BB6550 /* Utils.m */; };
+		CBCCE8440871970D6AECF620 /* Pods_RNProjectDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DF86A059EDDBA3A80B4F73A /* Pods_RNProjectDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2DF86A059EDDBA3A80B4F73A /* Pods_RNProjectDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RNProjectDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		352AA0041EE69E8600BB6550 /* RNProjectDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNProjectDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		352AA0081EE69E8800BB6550 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		352AA00A1EE69E8800BB6550 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +58,18 @@
 		352AA0281EE69EA500BB6550 /* RNProjectDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNProjectDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		352AA02C1EE69EA600BB6550 /* RNProjectDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNProjectDemoUITests.m; sourceTree = "<group>"; };
 		352AA02E1EE69EA700BB6550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		352AA0451EE78C3300BB6550 /* RNToNativeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNToNativeManager.h; sourceTree = "<group>"; };
+		352AA0461EE78C3300BB6550 /* RNToNativeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNToNativeManager.m; sourceTree = "<group>"; };
+		352AA0611EE7CD5100BB6550 /* PushManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushManager.h; sourceTree = "<group>"; };
+		352AA0621EE7CD5100BB6550 /* PushManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushManager.m; sourceTree = "<group>"; };
+		352AA0641EE7D47900BB6550 /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
+		352AA0651EE7D47900BB6550 /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
+		352AA0681EE7D59800BB6550 /* BaseTapSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTapSound.h; sourceTree = "<group>"; };
+		352AA0691EE7D59800BB6550 /* BaseTapSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTapSound.m; sourceTree = "<group>"; };
+		352AA06A1EE7D59800BB6550 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		352AA06B1EE7D59800BB6550 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		619ED20A3D3B3C61A2B7F2BB /* Pods-RNProjectDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNProjectDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RNProjectDemo/Pods-RNProjectDemo.release.xcconfig"; sourceTree = "<group>"; };
+		89CD8ED5837218E9E0B487A7 /* Pods-RNProjectDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNProjectDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RNProjectDemo/Pods-RNProjectDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBCCE8440871970D6AECF620 /* Pods_RNProjectDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		082E9E0D70630861B1486852 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2DF86A059EDDBA3A80B4F73A /* Pods_RNProjectDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		352A9FFB1EE69E8600BB6550 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +113,8 @@
 				352AA0201EE69EA400BB6550 /* RNProjectDemoTests */,
 				352AA02B1EE69EA500BB6550 /* RNProjectDemoUITests */,
 				352AA0051EE69E8600BB6550 /* Products */,
+				BC283DF7552BF2E993F27424 /* Pods */,
+				082E9E0D70630861B1486852 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +135,13 @@
 				352AA00B1EE69E8900BB6550 /* AppDelegate.m */,
 				352AA00D1EE69E8900BB6550 /* ViewController.h */,
 				352AA00E1EE69E8900BB6550 /* ViewController.m */,
+				352AA0641EE7D47900BB6550 /* QRCodeViewController.h */,
+				352AA0651EE7D47900BB6550 /* QRCodeViewController.m */,
+				352AA0611EE7CD5100BB6550 /* PushManager.h */,
+				352AA0621EE7CD5100BB6550 /* PushManager.m */,
+				352AA0451EE78C3300BB6550 /* RNToNativeManager.h */,
+				352AA0461EE78C3300BB6550 /* RNToNativeManager.m */,
+				352AA0671EE7D59800BB6550 /* Utils */,
 				352AA0101EE69E8A00BB6550 /* Main.storyboard */,
 				352AA0131EE69E8A00BB6550 /* Assets.xcassets */,
 				352AA0151EE69E8B00BB6550 /* LaunchScreen.storyboard */,
@@ -140,6 +177,26 @@
 			path = RNProjectDemoUITests;
 			sourceTree = "<group>";
 		};
+		352AA0671EE7D59800BB6550 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				352AA0681EE7D59800BB6550 /* BaseTapSound.h */,
+				352AA0691EE7D59800BB6550 /* BaseTapSound.m */,
+				352AA06A1EE7D59800BB6550 /* Utils.h */,
+				352AA06B1EE7D59800BB6550 /* Utils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BC283DF7552BF2E993F27424 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				89CD8ED5837218E9E0B487A7 /* Pods-RNProjectDemo.debug.xcconfig */,
+				619ED20A3D3B3C61A2B7F2BB /* Pods-RNProjectDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +204,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 352AA0311EE69EA700BB6550 /* Build configuration list for PBXNativeTarget "RNProjectDemo" */;
 			buildPhases = (
+				6FE41C89F7F0DEA45AA82F58 /* [CP] Check Pods Manifest.lock */,
 				352AA0001EE69E8600BB6550 /* Sources */,
 				352AA0011EE69E8600BB6550 /* Frameworks */,
 				352AA0021EE69E8600BB6550 /* Resources */,
+				2733117ABBEA04F8180270B8 /* [CP] Embed Pods Frameworks */,
+				10FEFFBAD671CA3649358866 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,14 +331,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10FEFFBAD671CA3649358866 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RNProjectDemo/Pods-RNProjectDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2733117ABBEA04F8180270B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RNProjectDemo/Pods-RNProjectDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FE41C89F7F0DEA45AA82F58 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		352AA0001EE69E8600BB6550 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				352AA06D1EE7D59800BB6550 /* Utils.m in Sources */,
 				352AA00F1EE69E8900BB6550 /* ViewController.m in Sources */,
+				352AA06C1EE7D59800BB6550 /* BaseTapSound.m in Sources */,
 				352AA00C1EE69E8900BB6550 /* AppDelegate.m in Sources */,
 				352AA0091EE69E8800BB6550 /* main.m in Sources */,
+				352AA0471EE78C3400BB6550 /* RNToNativeManager.m in Sources */,
+				352AA0631EE7CD5100BB6550 /* PushManager.m in Sources */,
+				352AA0661EE7D47900BB6550 /* QRCodeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,25 +538,33 @@
 		};
 		352AA0321EE69EA700BB6550 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89CD8ED5837218E9E0B487A7 /* Pods-RNProjectDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = L6U8P6EVQF;
 				INFOPLIST_FILE = RNProjectDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = linzaifei.RNProjectDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
 		352AA0331EE69EA700BB6550 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 619ED20A3D3B3C61A2B7F2BB /* Pods-RNProjectDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = L6U8P6EVQF;
 				INFOPLIST_FILE = RNProjectDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = linzaifei.RNProjectDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -516,6 +637,7 @@
 				352AA0331EE69EA700BB6550 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		352AA0341EE69EA700BB6550 /* Build configuration list for PBXNativeTarget "RNProjectDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +646,7 @@
 				352AA0361EE69EA700BB6550 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		352AA0371EE69EA700BB6550 /* Build configuration list for PBXNativeTarget "RNProjectDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +655,7 @@
 				352AA0391EE69EA700BB6550 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

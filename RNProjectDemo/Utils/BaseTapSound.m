@@ -109,6 +109,7 @@ static BaseTapSound *baseSound;
  */
 +(BOOL)isCameraRearDeviceAvailable
 {
+
   return [UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear];
 }
 /**
